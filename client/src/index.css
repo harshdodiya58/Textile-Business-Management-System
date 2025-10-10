@@ -1,0 +1,67 @@
+:root {
+  --font-family: 'Nunito', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  --bg: linear-gradient(180deg, #f6f8fb 0%, #eef2f7 100%);
+  --surface: #ffffff;
+  --text: #213547;
+  --muted: #6b7280;
+  --primary: #81c784;
+  --accent: #64b5f6;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a { color: inherit; text-decoration: none; }
+
+h1, h2, h3, h4, h5, h6 { color: var(--text); margin: 0; }
+
+/* App main spacing */
+.MuiBox-root.main { padding: 24px; }
+
+/* Card / Paper look */
+.MuiPaper-root, .MuiCard-root {
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: 0 6px 18px rgba(35, 47, 63, 0.08);
+}
+
+/* Dashboard stat card */
+.dashboard-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+}
+.dashboard-card .stat-info { flex: 1; }
+.dashboard-card .stat-value { font-size: 1.4rem; font-weight: 700; }
+.stat-avatar {
+  width: 56px; height: 56px; display: inline-flex; align-items: center; justify-content: center; border-radius: 12px; color: white;
+}
+.stat-avatar.primary { background: var(--primary); }
+.stat-avatar.accent { background: var(--accent); }
+.stat-sub { color: var(--muted); font-size: 0.9rem; }
+
+/* Recent table tweaks */
+.table-compact td, .table-compact th { padding: 8px 12px; }
+
+/* Buttons */
+.MuiButton-root { text-transform: none; }
+
+/* Responsive tweaks */
+@media (max-width: 900px) { .MuiDrawer-root { display: none; } }
+
+/* Print adjustments handled in print.css */
+
+/* End of custom global styles */

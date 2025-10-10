@@ -1,0 +1,15 @@
+/* Dedicated print stylesheet for invoices */
+@media print {
+  body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: #000; }
+  .MuiDrawer-root, .MuiAppBar-root, .MuiToolbar-root, .Sidebar {
+    display: none !important;
+  }
+  .invoice-print-container {
+    padding: 0.5in;
+    width: 100%;
+  }
+  table { width: 100%; border-collapse: collapse; }
+  td, th { border: 1px solid #000; padding: 6px; }
+  th { background: #f0f0f0; }
+  .no-print { display: none !important; }
+}
